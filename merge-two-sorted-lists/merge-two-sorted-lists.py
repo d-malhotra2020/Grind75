@@ -23,3 +23,4 @@ class Solution:
             tail.next = list2
             list2 = list2.next
         return dummy.next
+
