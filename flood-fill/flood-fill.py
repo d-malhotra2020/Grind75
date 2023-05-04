@@ -3,8 +3,8 @@ class Solution:
         newColor = image[sr][sc]
         height = len(image)
         width = len(image[0])
-        
-        def dfs(sr, sc):
+
+        def dfs(sr,sc):
             if 0 <= sr < height and 0 <= sc < width and image[sr][sc] == newColor and image[sr][sc] != color:
                 image[sr][sc] = color
                 dfs(sr+1, sc)
