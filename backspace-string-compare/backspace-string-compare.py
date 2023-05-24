@@ -18,4 +18,5 @@ class Solution:
         if s_out == t_out:
             return True
         else:
-            return 
+            return False
+                    
