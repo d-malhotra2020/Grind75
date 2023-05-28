@@ -3,7 +3,6 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-
         left = 0
         for right in range(len(nums)):
             if nums[right]:
