@@ -5,6 +5,7 @@
 #         self.next = next
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        
         fast = head
         slow = head
 
@@ -18,8 +19,7 @@ class Solution:
             slow.next = prev
             prev = slow
             slow = temp
-
-            #check palindrome
+        
         left = head
         right = prev
         while right:
