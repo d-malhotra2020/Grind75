@@ -9,5 +9,5 @@ class Solution:
                 left+=1
             else:
                 result.append(nums[right]*nums[right])
-                right -=1
+                right-=1
         return result[::-1]
