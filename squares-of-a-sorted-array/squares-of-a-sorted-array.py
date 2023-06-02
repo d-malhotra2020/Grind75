@@ -1,7 +1,7 @@
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         result = []
-        left = 0
+        left = 0 
         right = len(nums)-1
         while left <= right:
             if nums[left] * nums[left] > nums[right] * nums[right]:
