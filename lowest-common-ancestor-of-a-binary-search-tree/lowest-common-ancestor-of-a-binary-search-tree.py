@@ -10,9 +10,9 @@ class Solution:
         current = root
 
         while current:
-            if p.val > current.val and q.val > current.val:
-                current = current.right
-            elif p.val < current.val and q.val < current.val:
+            if current.val > p.val and current.val > q.val:
                 current = current.left
+            elif current.val < p.val and current.val < q.val:
+                current = current.right
             else:
                 return current
