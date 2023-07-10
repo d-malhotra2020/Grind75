@@ -1,13 +1,12 @@
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
-        ran = sorted(list(ransomNote))
+        ransom = sorted(list(ransomNote))
         mag = sorted(list(magazine))
 
         for char in mag:
-            if ran and char in ran[0]:
-                ran.pop(0)
-        if ran:
-            return False
+            if ransom and char in ransom[0]:
+                ransom.pop(0)
+        if ransom:
+                return False
         else:
             return True
-            
