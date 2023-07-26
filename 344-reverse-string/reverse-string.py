@@ -3,10 +3,8 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        stack = []
-        for char in s:
-            stack.append(char)
-        i = 0
-        while stack:
-            s[i] = stack.pop()
-            i+=1
+        def reverse(left, right):
+            if left < right:
+                s[left], s[right] = s[right], s[left]
+                reverse(left+1, right-1)
+        reverse(0, len(s)-1)
