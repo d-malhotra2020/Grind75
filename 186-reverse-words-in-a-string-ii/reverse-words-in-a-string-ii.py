@@ -3,7 +3,7 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        left = 0
+        left = 0 
         right = len(s)-1
         while left <= right:
             s[left], s[right] = s[right], s[left]
@@ -13,11 +13,11 @@ class Solution:
         right = 0
         index = 0
         while right < len(s):
-            if s[right] != ' ':
+            if s[right] != " ":
                 right+=1
             else:
                 index = right
-                right -=1
+                right-=1
                 while left <= right:
                     s[left], s[right] = s[right], s[left]
                     left+=1
@@ -25,8 +25,8 @@ class Solution:
                 right = index+1
                 left = right
         right-=1
-        while left<=right:
+        while left <= right:
             s[left], s[right] = s[right], s[left]
             left+=1
             right-=1
-
+        
