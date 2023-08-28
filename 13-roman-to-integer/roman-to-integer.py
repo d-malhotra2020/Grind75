@@ -4,6 +4,8 @@ class Solution:
 
         result = 0
 
+        #XV
+
         for i in range(len(s)):
             if i+1 < len(s) and roman[s[i+1]] > roman[s[i]]:
                 result -= roman[s[i]]
