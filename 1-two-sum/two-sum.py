@@ -5,5 +5,4 @@ class Solution:
             goal = target - nums[i]
             if goal in hashmap:
                 return [hashmap[goal], i]
-            else:
-                hashmap[nums[i]] = i
+            hashmap[nums[i]] = i
