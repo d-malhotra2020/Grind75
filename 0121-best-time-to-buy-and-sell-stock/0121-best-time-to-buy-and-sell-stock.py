@@ -9,7 +9,8 @@ class Solution:
                 maxprofit = max(maxprofit, profit)
             else:
                 left = right
-            right +=1
+            right+=1
         return maxprofit
-            
+                
+                
             
