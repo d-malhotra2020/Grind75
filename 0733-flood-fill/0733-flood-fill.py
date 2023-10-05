@@ -10,5 +10,5 @@ class Solution:
                 dfs(sr-1, sc)
                 dfs(sr, sc+1)
                 dfs(sr, sc-1)
-        dfs(sr, sc)
+        dfs(sr,sc)
         return image
