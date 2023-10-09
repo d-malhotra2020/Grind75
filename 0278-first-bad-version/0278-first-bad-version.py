@@ -10,5 +10,6 @@ class Solution:
             if isBadVersion(mid):
                 end = mid
             else:
-                first = mid+1
+                first = mid + 1
         return first
+        
