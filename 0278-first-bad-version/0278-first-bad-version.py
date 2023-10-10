@@ -6,7 +6,7 @@ class Solution:
         first = 1
         end = n
         while first < end:
-            mid = (first + end)//2
+            mid = (first+end)//2
             if isBadVersion(mid):
                 end = mid
             else:
