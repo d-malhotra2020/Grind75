@@ -4,9 +4,10 @@ class Solution:
         mag = sorted(list(magazine))
         
         for char in mag:
-            if ransom and char in ransom[0]:
+            if ransom and char in ransom[0]: 
                 ransom.pop(0)
         if ransom:
             return False
         else:
             return True
+                
