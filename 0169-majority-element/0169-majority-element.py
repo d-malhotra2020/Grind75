@@ -5,5 +5,6 @@ class Solution:
         for n in nums:
             if count == 0:
                 result = n
-            count+=(1 if n == result else -1)
+            count += (1 if n == result else -1)
         return result
+            
