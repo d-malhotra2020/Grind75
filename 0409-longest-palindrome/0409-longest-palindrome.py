@@ -4,9 +4,7 @@ class Solution:
         output = 0
         
         for count in c.values():
-            output += int(count/2)*2
+            output+=int(count/2)*2
             if output%2 == 0 and count%2 == 1:
                 output+=1
         return output
-            
-            
