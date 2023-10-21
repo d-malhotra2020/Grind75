@@ -4,4 +4,3 @@ class Solution:
         for n in nums:
             result = n ^ result
         return result
-            
