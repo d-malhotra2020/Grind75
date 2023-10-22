@@ -7,13 +7,12 @@ class Solution:
             div*=10
         while x:
             right = x%10
-            left = x//div
-            
+            left = x // div
             if left != right:
                 return False
-            
-            x = (x%div) // 10
-            div = div // 100
+        
+            x = (x%div)//10
+            div = div//100
         return True
         
         
