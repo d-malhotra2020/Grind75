@@ -14,4 +14,4 @@ class Solution:
             return (left.val == right.val and 
                     dfs(left.left, right.right) and
                     dfs(left.right, right.left))
-        return dfs(root.left, root.right)
+        return dfs(root.right, root.left)
