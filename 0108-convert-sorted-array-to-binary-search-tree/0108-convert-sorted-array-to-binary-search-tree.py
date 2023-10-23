@@ -16,5 +16,3 @@ class Solution:
             return root
         return helper(0, len(nums)-1)
             
-            
-            
