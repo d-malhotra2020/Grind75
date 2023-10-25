@@ -9,6 +9,6 @@ class Solution:
                 result.append(nums[left]*nums[left])
                 left+=1
             else:
-                result.append(nums[right] * nums[right])
+                result.append(nums[right]*nums[right])
                 right-=1
         return result[::-1]
