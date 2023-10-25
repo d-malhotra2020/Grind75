@@ -11,4 +11,4 @@ class Solution:
             else:
                 result.append(nums[right]*nums[right])
                 right-=1
-        return result[::-1]
+        return reversed(result)
