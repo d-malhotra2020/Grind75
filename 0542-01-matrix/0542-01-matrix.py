@@ -11,13 +11,15 @@ class Solution:
                     q.append((i, j))
                 else:
                     mat[i][j] = "#"
+        
         for rows, columns in q:
-            for dx, dy in (1, 0), (-1, 0), (0, 1), (0, -1):
+            for dx, dy in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
                 nr = rows + dx
                 nc = columns + dy
-                
+            
                 if 0 <= nr < height and 0 <= nc < width and mat[nr][nc] == "#":
                     mat[nr][nc] = mat[rows][columns] + 1
                     q.append((nr, nc))
-                    
         return mat
+                
+            
