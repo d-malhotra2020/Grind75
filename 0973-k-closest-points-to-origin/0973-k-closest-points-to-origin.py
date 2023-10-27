@@ -8,8 +8,8 @@ class Solution:
         heapq.heapify(minHeap)
         result = []
         while k > 0:
-            dist, x, y = heapq.heappop(minHeap)
-            result.append([x, y])
-            k -=1
+            distance, x, y = heapq.heappop(minHeap)
+            result.append([x, y])                
+            k-=1
             
         return result
