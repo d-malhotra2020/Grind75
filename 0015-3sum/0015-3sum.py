@@ -7,7 +7,7 @@ class Solution:
             if i > 0 and a == nums[i-1]:
                 continue
             left = i + 1
-            right = len(nums)-1
+            right = len(nums) - 1
             while left < right:
                 total = a + nums[left] + nums[right]
                 if total > 0:
@@ -20,5 +20,3 @@ class Solution:
                     while nums[left] == nums[left-1] and left < right:
                         left+=1
         return result
-            
-        
