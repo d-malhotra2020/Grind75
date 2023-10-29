@@ -11,9 +11,9 @@ class Solution:
         q = collections.deque()
         q.append(root)
         while q:
+            qLength = len(q)
             level = []
-            qlength = len(q)
-            for i in range(qlength):
+            for i in range(qLength):
                 node = q.popleft()
                 if node:
                     level.append(node.val)
@@ -22,7 +22,5 @@ class Solution:
             if level:
                 result.append(level)
         return result
-                
-                    
             
-                
+        
