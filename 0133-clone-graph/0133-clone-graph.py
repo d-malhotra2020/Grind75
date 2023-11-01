@@ -13,17 +13,17 @@ class Solution:
         if not node:
             return None
         seen = {}
-        
         def dfs(node, seen):
-            new_node = Node(node.val)
-            seen[node.val] = new_node
+            newNode = Node(node.val)
+            seen[node.val] = newNode
             new_neighbors = []
             for n in node.neighbors:
                 if n.val not in seen:
-                    new_neighbors.append(dfs(n, seen))
+                    new_neighbors.append((dfs(n, seen)))
                 else:
                     new_neighbors.append(seen[n.val])
-            new_node.neighbors = new_neighbors
-            return new_node
-        
+                newNode.neighbors = new_neighbors
+            return newNode
         return dfs(node, seen)
+            
+            
