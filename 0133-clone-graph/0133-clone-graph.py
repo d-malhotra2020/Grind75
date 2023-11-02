@@ -18,9 +18,10 @@ class Solution:
             newNeighbors = []
             for n in node.neighbors:
                 if n.val not in seen:
-                    newNeighbors.append((dfs(n, seen)))
+                    newNeighbors.append(dfs(n, seen))
                 else:
                     newNeighbors.append(seen[n.val])
                 newNode.neighbors = newNeighbors
             return newNode
         return dfs(node, seen)
+                    
