@@ -4,21 +4,26 @@ class Solution:
         
         for course, prereq in prerequisites:
             preMap[course].append(prereq)
-        visited = set()
+            
+        
+        visitSet = set()
         def dfs(course):
-            if course in visited:
+            if course in visitSet:
                 return False
             if preMap[course] == []:
                 return True
-            visited.add(course)
+        
+            visitSet.add(course)
             for prereq in preMap[course]:
                 if not dfs(prereq):
                     return False
-            visited.remove(course)
+            visitSet.remove(course)
             preMap[course] = []
             return True
+    
         for course in range(numCourses):
             if not dfs(course):
                 return False
         return True
+        
             
