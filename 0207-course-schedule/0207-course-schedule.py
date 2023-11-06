@@ -1,29 +1,26 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        preMap = {i: [] for i in range(numCourses)}
         
-        for course, prereq in prerequisites:
-            preMap[course].append(prereq)
+        preMap = {i:[] for i in range(numCourses)}
+        
+        for courses, prereqs in prerequisites:
+            preMap[courses].append(prereqs)
             
-        
         visitSet = set()
-        def dfs(course):
-            if course in visitSet:
+        def dfs(courses):
+            if courses in visitSet:
                 return False
-            if preMap[course] == []:
+            if preMap[courses] == []:
                 return True
-        
-            visitSet.add(course)
-            for prereq in preMap[course]:
-                if not dfs(prereq):
+            
+            visitSet.add(courses)
+            for prereqs in preMap[courses]:
+                if not dfs(prereqs):
                     return False
-            visitSet.remove(course)
-            preMap[course] = []
+            visitSet.remove(courses)
+            preMap[courses] = []
             return True
-    
-        for course in range(numCourses):
-            if not dfs(course):
+        for courses in range(numCourses):
+            if not dfs(courses):
                 return False
         return True
-        
-            
