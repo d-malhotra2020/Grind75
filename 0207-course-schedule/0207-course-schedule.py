@@ -1,25 +1,24 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        adjList = collections.defaultdict(list)
         
-        preMap = {i : [] for i in range(numCourses)}
         for course, prereq in prerequisites:
-            preMap[course].append(prereq)
+            adjList[prereq].append(course)
             
-        visitSet = set()
-        def dfs(course):
-            if course in visitSet:
-                return False
-            if preMap[course] == []:
-                return True
-                
-            visitSet.add(course)
-            for prereq in preMap[course]:
-                if not dfs(prereq):
-                    return False
-            visitSet.remove(course)
-            preMap[course] = []
-            return True
-        for course in range(numCourses):
-            if not dfs(course):
+        def cycle(node, tracker, visited):
+            tracker[node] = True
+            visited[node] = True
+            
+            for n in adjList[node]:
+                if n not in visited and cycle(n, tracker, visited):
+                    return True
+                elif n in tracker:
+                    return True
+            tracker.pop(node)
+            return False
+        visited = {}
+        for n in range(numCourses):
+            tracker = {}
+            if n not in visited and cycle(n,tracker, visited):
                 return False
         return True
