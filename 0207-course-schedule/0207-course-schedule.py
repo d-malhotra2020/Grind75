@@ -1,24 +1,29 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        adjList = collections.defaultdict(list)
+        premap = {i : [] for i in range(numCourses)}
         
         for course, prereq in prerequisites:
-            adjList[prereq].append(course)
+            premap[course].append(prereq)
             
-        def cycle(node, tracker, visited):
-            tracker[node] = True
-            visited[node] = True
+            #visitSet = all courses along the curr DFS path
             
-            for n in adjList[node]:
-                if n not in visited and cycle(n, tracker, visited):
-                    return True
-                elif n in tracker:
-                    return True
-            tracker.pop(node)
-            return False
-        visited = {}
-        for n in range(numCourses):
-            tracker = {}
-            if n not in visited and cycle(n,tracker, visited):
+        visitSet = set()
+        def dfs(course):
+            if course in visitSet:
+                return False
+            if premap[course] == []:
+                return True
+            visitSet.add(course)
+            for prereq in premap[course]:
+                if not dfs(prereq):
+                    return False
+            visitSet.remove(course)
+            premap[course] = []
+            return True
+            
+        for course in range(numCourses):
+            if not dfs(course):
                 return False
         return True
+            
+                    
