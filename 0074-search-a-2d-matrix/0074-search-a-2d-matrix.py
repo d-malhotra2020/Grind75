@@ -17,10 +17,9 @@ class Solution:
                 break
         if not (top <= bottom):
             return False
-        
-        row = (top + bottom) // 2
+        row = (top + bottom)//2
         left = 0
-        right = columns
+        right = columns - 1
         while (left <= right):
             mid = (left + right)//2
             if target > matrix[row][mid]:
@@ -30,3 +29,5 @@ class Solution:
             else:
                 return True
         return False
+            
+        
