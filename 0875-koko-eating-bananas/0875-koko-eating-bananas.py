@@ -10,9 +10,10 @@ class Solution:
             hours = 0
             for p in piles:
                 hours += math.ceil(p/k)
-            if hours<=h:
+                
+            if hours <= h:
+                right = k - 1
                 result = min(result, k)
-                right = k -1
             else:
                 left = k + 1
         return result
