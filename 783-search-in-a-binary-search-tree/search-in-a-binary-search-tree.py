@@ -15,5 +15,3 @@ class Solution:
             else:
                 current = current.right
         return None
-                
-            
