@@ -17,11 +17,11 @@ class Solution:
                 return root.right
             elif not root.right:
                 return root.left
-            #find min from right subtree
             
+            #find min from right subtree
             current = root.right
             while current.left:
                 current = current.left
-            root.val  = current.val
+            root.val = current.val
             root.right = self.deleteNode(root.right, root.val)
         return root
