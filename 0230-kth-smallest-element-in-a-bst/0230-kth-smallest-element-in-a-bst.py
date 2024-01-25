@@ -14,9 +14,7 @@ class Solution:
                 stack.append(current)
                 current = current.left
             current = stack.pop()
-            n += 1
+            n+=1
             if n == k:
                 return current.val
             current = current.right
-            
-                
