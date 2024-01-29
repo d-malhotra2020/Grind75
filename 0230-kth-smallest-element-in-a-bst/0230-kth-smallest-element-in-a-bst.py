@@ -19,3 +19,4 @@ class Solution:
                 return current.val
             current = current.right
         return current
+            
