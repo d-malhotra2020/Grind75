@@ -8,10 +8,10 @@ class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         result = []
         q = collections.deque([root])
-        
         while q:
-            qlength = len(q)
             rightSide = None
+            qlength = len(q)
+            
             for i in range(qlength):
                 node = q.popleft()
                 if node:
@@ -21,6 +21,5 @@ class Solution:
             if rightSide:
                 result.append(rightSide.val)
         return result
-                    
-                    
                 
+            
