@@ -7,14 +7,12 @@ class Solution:
         def dfs(index):
             if index >= len(nums):
                 result.append(subset.copy())
-                return
-            
-            
+                return result
+            dfs(index+1)
             subset.append(nums[index])
-            dfs(index+1)
             
-            subset.pop()
             dfs(index+1)
+            subset.pop()
             
         dfs(0)
         return result
