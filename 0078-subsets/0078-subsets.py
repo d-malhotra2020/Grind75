@@ -8,11 +8,12 @@ class Solution:
                 result.append(subset.copy())
                 return
             
-            dfs(index+1)
             subset.append(nums[index])
-                
             dfs(index+1)
+            
             subset.pop()
-                
+            dfs(index+1)
+            
         dfs(0)
         return result
+            
