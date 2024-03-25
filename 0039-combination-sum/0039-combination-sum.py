@@ -6,14 +6,15 @@ class Solution:
             if total == target:
                 result.append(current.copy())
                 return
-            if i>= len(candidates) or total > target:
+            if i >= len(candidates) or total > target:
                 return
             
-            candidates[i]
             current.append(candidates[i])
             dfs(i, current, total + candidates[i])
             current.pop()
-            dfs(i + 1, current, total)
-        
+            dfs(i+1, current, total)
+            
         dfs(0, [], 0)
         return result
+                
+        
