@@ -10,11 +10,8 @@ class Solution:
                 return
             
             current.append(candidates[i])
-            dfs(i, current, total + candidates[i])
+            dfs(i, current, total+candidates[i])
             current.pop()
             dfs(i+1, current, total)
-            
         dfs(0, [], 0)
         return result
-                
-        
