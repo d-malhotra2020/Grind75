@@ -11,3 +11,4 @@ class Solution:
             result.append([x, y])
             k -= 1
         return result
+    
