@@ -24,6 +24,7 @@ class MyHashSet:
                 current.next = current.next.next
                 return
             current = current.next
+            
         
 
     def contains(self, key: int) -> bool:
@@ -33,7 +34,6 @@ class MyHashSet:
                 return True
             current = current.next
         return False
-            
 
 
 # Your MyHashSet object will be instantiated and called as such:
