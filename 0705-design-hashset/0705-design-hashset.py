@@ -6,6 +6,7 @@ class MyHashSet:
 
     def __init__(self):
         self.set = [ListNode(0) for i in range(10**4)]
+        
 
     def add(self, key: int) -> None:
         current = self.set[key%len(self.set)]
@@ -15,7 +16,6 @@ class MyHashSet:
             current = current.next
         current.next = ListNode(key)
         
-
     def remove(self, key: int) -> None:
         current = self.set[key%len(self.set)]
         while current.next:
