@@ -1,5 +1,5 @@
 class ListNode:
-    def __init__(self, key):
+    def __init__(self,key):
         self.key = key
         self.next = None
 class MyHashSet:
@@ -9,14 +9,13 @@ class MyHashSet:
         
 
     def add(self, key: int) -> None:
-        current =  self.set[key%len(self.set)]
+        current = self.set[key%len(self.set)]
         while current.next:
             if current.next.key == key:
                 return
             current = current.next
         current.next = ListNode(key)
         
-
     def remove(self, key: int) -> None:
         current = self.set[key%len(self.set)]
         while current.next:
@@ -24,7 +23,6 @@ class MyHashSet:
                 current.next = current.next.next
                 return
             current = current.next
-        
 
     def contains(self, key: int) -> bool:
         current = self.set[key%len(self.set)]
