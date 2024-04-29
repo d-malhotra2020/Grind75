@@ -1,11 +1,13 @@
 class ListNode:
-    def __init__(self,key):
+    def __init__(self, key):
         self.key = key
         self.next = None
 class MyHashSet:
 
     def __init__(self):
         self.set = [ListNode(0) for i in range(10**4)]
+    
+        
 
     def add(self, key: int) -> None:
         current = self.set[key%len(self.set)]
@@ -30,7 +32,9 @@ class MyHashSet:
             if current.next.key == key:
                 return True
             current = current.next
+            
         return False
+        
 
 
 # Your MyHashSet object will be instantiated and called as such:
