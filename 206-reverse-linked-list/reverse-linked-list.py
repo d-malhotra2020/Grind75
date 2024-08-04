@@ -4,7 +4,7 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:    
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if not head:
             return None
         newHead = head
@@ -13,4 +13,5 @@ class Solution:
             head.next.next = head
         head.next = None
         return newHead
+            
             
