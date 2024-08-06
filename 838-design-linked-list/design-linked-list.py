@@ -1,5 +1,5 @@
 class ListNode:
-    def __init__(self,val):
+    def __init__(self, val):
         self.val = val
         self.previous = None
         self.next = None
@@ -15,22 +15,24 @@ class MyLinkedList:
         current = self.left.next
         while current and index > 0:
             current = current.next
-            index -= 1
+            index -=1
         if current and current != self.right and index == 0:
             return current.val
         return -1
-    
+
     def addAtHead(self, val: int) -> None:
-        node, next, previous = ListNode(val), self.left.next, self.left
+        node = ListNode(val)
+        next = self.left.next
+        previous = self.left
         previous.next = node
         next.previous = node
         node.next = next
         node.previous = previous
-        
-        
 
     def addAtTail(self, val: int) -> None:
-        node, next, previous = ListNode(val), self.right, self.right.previous
+        node = ListNode(val)
+        next = self.right
+        previous = self.right.previous
         previous.next = node
         next.previous = node
         node.next = next
@@ -42,7 +44,9 @@ class MyLinkedList:
             current = current.next
             index -=1
         if current and index == 0:
-            node, next, previous = ListNode(val), current, current.previous
+            node = ListNode(val)
+            next = current
+            previous = current.previous
             previous.next = node
             next.previous = node
             node.next = next
@@ -54,7 +58,8 @@ class MyLinkedList:
             current = current.next
             index -=1
         if current and current != self.right and index == 0:
-            next, previous = current.next, current.previous
+            next = current.next
+            previous = current.previous
             next.previous = previous
             previous.next = next
         
