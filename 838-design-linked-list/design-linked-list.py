@@ -1,4 +1,4 @@
-class ListNode:
+class ListNode():
     def __init__(self, val):
         self.val = val
         self.previous = None
@@ -10,6 +10,7 @@ class MyLinkedList:
         self.right = ListNode(0)
         self.left.next = self.right
         self.right.previous = self.left
+                
 
     def get(self, index: int) -> int:
         current = self.left.next
@@ -19,6 +20,7 @@ class MyLinkedList:
         if current and current != self.right and index == 0:
             return current.val
         return -1
+        
 
     def addAtHead(self, val: int) -> None:
         node = ListNode(val)
@@ -51,7 +53,6 @@ class MyLinkedList:
             next.previous = node
             node.next = next
             node.previous = previous
-            
     def deleteAtIndex(self, index: int) -> None:
         current = self.left.next
         while current and index > 0:
