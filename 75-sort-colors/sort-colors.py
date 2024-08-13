@@ -7,7 +7,7 @@ class Solution:
         white = 0
         blue = len(nums)-1
         
-        while white <= blue:
+        while (white<=blue):
             if nums[white] == 0:
                 nums[white], nums[red] = nums[red], nums[white]
                 white+=1
@@ -16,6 +16,5 @@ class Solution:
                 white+=1
             else:
                 nums[white], nums[blue] = nums[blue], nums[white]
-                blue-=1
-            
-    
+                blue -=1
+                
