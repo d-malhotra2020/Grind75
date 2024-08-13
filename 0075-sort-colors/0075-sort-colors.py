@@ -5,7 +5,7 @@ class Solution:
         """
         red = 0
         white = 0
-        blue = len(nums)-1
+        blue = len(nums) - 1
         
         while (white<=blue):
             if nums[white] == 0:
