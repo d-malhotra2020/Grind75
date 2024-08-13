@@ -3,25 +3,19 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        left = 0
-        right = len(nums)-1
+        red = 0
+        white = 0
+        blue = len(nums)-1
         
-        i = 0
-        
-        def swap(i, j):
-            tmp = nums[i]
-            nums[i] = nums[j]
-            nums[j] = tmp
-        
-        while i <= right:
-            if nums[i] == 0:
-                swap(left, i)
-                left+=1
-                
-            elif nums[i] == 2:
-                swap(i, right)
-                right-=1
-                i-=1
-            i+=1
-        
-                
+        while white <= blue:
+            if nums[white] == 0:
+                nums[white], nums[red] = nums[red], nums[white]
+                white+=1
+                red+=1
+            elif nums[white] == 1:
+                white+=1
+            else:
+                nums[white], nums[blue] = nums[blue], nums[white]
+                blue-=1
+            
+    
