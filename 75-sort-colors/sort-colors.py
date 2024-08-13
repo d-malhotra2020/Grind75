@@ -16,5 +16,4 @@ class Solution:
                 white+=1
             else:
                 nums[white], nums[blue] = nums[blue], nums[white]
-                blue -=1
-                
+                blue-=1
