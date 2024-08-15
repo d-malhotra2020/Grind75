@@ -17,6 +17,7 @@ class Solution:
                 break
         if not (top <= bottom):
             return False
+        
         left = 0
         right = columns - 1
         row = (top + bottom)//2
@@ -29,5 +30,6 @@ class Solution:
             else:
                 return True
         return False
-            
         
+            
+            
