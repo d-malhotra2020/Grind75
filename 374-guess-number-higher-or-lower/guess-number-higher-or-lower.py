@@ -11,7 +11,7 @@ class Solution:
         right = n
         
         while (left <= right):
-            mid = (left+right)//2
+            mid = (left + right)//2
             result = guess(mid)
             if result > 0:
                 left = mid + 1
