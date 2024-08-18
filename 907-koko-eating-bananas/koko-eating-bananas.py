@@ -6,8 +6,8 @@ class Solution:
         result = right
         
         while (left <= right):
-            hours = 0
             k = (left + right)//2
+            hours = 0
             for p in piles:
                 hours += math.ceil(p/k)
             if hours <= h:
@@ -16,5 +16,3 @@ class Solution:
             else:
                 left = k + 1
         return result
-                
-        
