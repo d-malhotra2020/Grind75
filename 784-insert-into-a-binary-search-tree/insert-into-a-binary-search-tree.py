@@ -13,3 +13,4 @@ class Solution:
         else:
             root.left = self.insertIntoBST(root.left, val)
         return root
+        
