@@ -7,7 +7,7 @@ class Solution:
         top = 0
         bottom = rows - 1
         
-        while (top <= bottom):
+        while (top<=bottom):
             row = (top + bottom)//2
             if target > matrix[row][-1]:
                 top = row + 1
@@ -31,5 +31,3 @@ class Solution:
                 return True
         return False
         
-            
-            
