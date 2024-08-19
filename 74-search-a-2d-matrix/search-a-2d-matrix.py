@@ -7,8 +7,8 @@ class Solution:
         top = 0
         bottom = rows - 1
         
-        while (top <= bottom):
-            row = (top+bottom)//2
+        while (top<=bottom):
+            row = (top + bottom)//2
             if target > matrix[row][-1]:
                 top = row + 1
             elif target < matrix[row][0]:
@@ -16,12 +16,13 @@ class Solution:
             else:
                 break
         if not (top <= bottom):
-            return False    
+            return False
         
         left = 0
         right = columns - 1
+        row = (top + bottom)//2
         while (left <= right):
-            mid = (left+right)//2
+            mid = (left + right)//2
             if target > matrix[row][mid]:
                 left = mid + 1
             elif target < matrix[row][mid]:
