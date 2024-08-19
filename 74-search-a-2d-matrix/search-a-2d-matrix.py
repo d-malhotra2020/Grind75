@@ -20,7 +20,6 @@ class Solution:
         
         left = 0
         right = columns - 1
-        row = (top + bottom)//2
         while (left <= right):
             mid = (left + right)//2
             if target > matrix[row][mid]:
