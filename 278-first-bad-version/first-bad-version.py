@@ -13,3 +13,4 @@ class Solution:
             else:
                 first = mid + 1
         return first
+            
