@@ -12,6 +12,6 @@ class Solution:
                 return current
             elif val > current.val:
                 current = current.right
-            elif val < current.val:
+            else:
                 current = current.left
-        return None
+        return current
