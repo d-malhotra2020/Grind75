@@ -19,9 +19,10 @@ class Solution:
                 return root.right
             else:
                 current = root.right
+                
                 while current.left:
                     current = current.left
                 root.val = current.val
                 root.right = self.deleteNode(root.right, current.val)
         return root
-                    
+                
