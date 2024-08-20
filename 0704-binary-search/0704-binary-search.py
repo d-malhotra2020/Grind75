@@ -11,4 +11,4 @@ class Solution:
                 right = mid - 1
             else:
                 return mid
-        return -1
+        return - 1
