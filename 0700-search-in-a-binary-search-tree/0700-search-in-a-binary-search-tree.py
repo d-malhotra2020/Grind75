@@ -6,8 +6,8 @@
 #         self.right = right
 class Solution:
     def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
-        current = root
         
+        current = root
         while current:
             if val == current.val:
                 return current
@@ -16,4 +16,3 @@ class Solution:
             else:
                 current = current.left
         return None
-                
