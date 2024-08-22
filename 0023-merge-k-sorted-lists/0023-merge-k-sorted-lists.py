@@ -16,10 +16,11 @@ class Solution:
                 mergedLists.append(self.mergeList(list1, list2))
             lists = mergedLists
         return lists[0]
-        
+    
     def mergeList(self, list1, list2):
         dummyNode = ListNode()
         tail = dummyNode
+        
         while list1 and list2:
             if list1.val < list2.val:
                 tail.next = list1
@@ -35,5 +36,6 @@ class Solution:
             tail.next = list2
             list2 = list2.next
         return dummyNode.next
-                
-                
+            
+            
+        
