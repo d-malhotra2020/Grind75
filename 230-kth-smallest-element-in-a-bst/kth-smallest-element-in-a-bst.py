@@ -19,4 +19,3 @@ class Solution:
             if n == k:
                 return current.val
             current = current.right
-                
