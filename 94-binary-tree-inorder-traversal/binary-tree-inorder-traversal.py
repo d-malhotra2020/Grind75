@@ -8,8 +8,8 @@ class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         
         current = root
-        stack = []
         result = []
+        stack = []
         
         while current or stack:
             while current:
