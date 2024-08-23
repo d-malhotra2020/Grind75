@@ -6,6 +6,7 @@
 #         self.right = right
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        
         result = []
         q = collections.deque()
         q.append(root)
