@@ -24,4 +24,4 @@ class Solution:
                 root.val = current.val
                 root.right = self.deleteNode(root.right, current.val)
         return root
-                
+                    
