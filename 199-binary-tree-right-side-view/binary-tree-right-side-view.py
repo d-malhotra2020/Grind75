@@ -9,17 +9,16 @@ class Solution:
         result = []
         q = collections.deque()
         q.append(root)
+        
         while q:
             rightSide = None
-            qLength = len(q)
-            for i in range(qLength):
+            qlength = len(q)
+            for i in range(qlength):
                 node = q.popleft()
                 if node:
                     rightSide = node
                     q.append(node.left)
                     q.append(node.right)
-                    
             if rightSide:
                 result.append(rightSide.val)
         return result
-        
