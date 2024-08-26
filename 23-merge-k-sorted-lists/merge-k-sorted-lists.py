@@ -36,5 +36,4 @@ class Solution:
         if list2:
             tail.next = list2
             list2 = list2.next
-        return dummyNode.next
-            
+        return dummyNode.next   
