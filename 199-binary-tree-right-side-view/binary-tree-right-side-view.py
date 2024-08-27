@@ -22,3 +22,4 @@ class Solution:
             if rightSide:
                 result.append(rightSide.val)
         return result
+            
