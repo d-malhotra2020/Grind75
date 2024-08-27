@@ -9,10 +9,10 @@ class Solution:
         
         current = root
         while current:
-            if val == current.val:
-                return current
-            elif val > current.val:
+            if val > current.val:
                 current = current.right
-            else:
+            elif val < current.val:
                 current = current.left
+            else:
+                return current
         return None
