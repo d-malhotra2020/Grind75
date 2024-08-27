@@ -9,7 +9,7 @@ class Solution:
         current = root
         stack = []
         n = 0
-        while current or stack:
+        while current or root:
             while current:
                 stack.append(current)
                 current = current.left
@@ -18,3 +18,4 @@ class Solution:
             if n == k:
                 return current.val
             current = current.right
+        
