@@ -9,7 +9,6 @@ class Solution:
     def guessNumber(self, n: int) -> int:
         left = 1
         right = n
-        
         while (left <= right):
             mid = (left + right)//2
             result = guess(mid)
@@ -19,6 +18,3 @@ class Solution:
                 right = mid - 1
             else:
                 return mid
-        return result
-            
-            
