@@ -16,8 +16,7 @@ class Solution:
                 mergedLists.append(self.mergeList(list1, list2))
             lists = mergedLists
         return lists[0]
-    
-    
+            
     def mergeList(self, list1, list2):
         dummyNode = ListNode()
         tail = dummyNode
@@ -29,6 +28,7 @@ class Solution:
             else:
                 tail.next = list2
                 list2 = list2.next
+            
             tail = tail.next
         if list1:
             tail.next = list1
@@ -36,4 +36,5 @@ class Solution:
         if list2:
             tail.next = list2
             list2 = list2.next
-        return dummyNode.next   
+        return dummyNode.next
+            
