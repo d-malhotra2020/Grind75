@@ -15,12 +15,12 @@ class Solution:
         else:
             if not root.right:
                 return root.left
-            if not root.left:
+            elif not root.left:
                 return root.right
             else:
                 current = root.right
                 while current.left:
                     current = current.left
-                root.val = current.val
-                root.right = self.deleteNode(root.right, current.val)
+            root.val = current.val
+            root.right = self.deleteNode(root.right, current.val)
         return root
