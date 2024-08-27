@@ -1,7 +1,7 @@
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         left = 0
-        right = len(nums)-1
+        right = len(nums) -1 
         
         while (left <= right):
             mid = (left + right)//2
@@ -11,4 +11,4 @@ class Solution:
                 right = mid - 1
             else:
                 return mid
-        return -1
+        return - 1
