@@ -22,5 +22,3 @@ class Solution:
             if level:
                 result.append(level)
         return result
-                
-            
