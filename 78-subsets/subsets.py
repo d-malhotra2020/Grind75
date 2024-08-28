@@ -2,7 +2,6 @@ class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         result = []
         subset = []
-        
         def dfs(i):
             if i >= len(nums):
                 result.append(subset.copy())
@@ -14,3 +13,5 @@ class Solution:
             dfs(i+1)
         dfs(0)
         return result
+                
+            
