@@ -9,7 +9,7 @@ class Solution:
             if i >= len(candidates) or totalSum > target:
                 return
             current.append(candidates[i])
-            dfs(i, current, totalSum + candidates[i])
+            dfs(i, current, totalSum+candidates[i])
             
             current.pop()
             dfs(i+1, current, totalSum)
@@ -17,4 +17,3 @@ class Solution:
         dfs(0, [], 0)
         return result
             
-        
