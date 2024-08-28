@@ -1,5 +1,6 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
+        
         result = []
         subset = []
         
@@ -12,6 +13,5 @@ class Solution:
             
             subset.pop()
             dfs(i+1)
-            
         dfs(0)
         return result
