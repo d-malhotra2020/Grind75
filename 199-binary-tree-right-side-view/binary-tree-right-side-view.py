@@ -23,3 +23,4 @@ class Solution:
                 result.append(rightSide.val)
         return result
             
+            
