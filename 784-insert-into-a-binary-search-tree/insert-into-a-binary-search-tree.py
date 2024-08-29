@@ -13,4 +13,3 @@ class Solution:
         elif val < root.val:
             root.left = self.insertIntoBST(root.left, val)
         return root
-    
