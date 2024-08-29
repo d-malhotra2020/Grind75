@@ -17,3 +17,4 @@ class Solution:
             result.append(current.val)
             current = current.right
         return result
+                
