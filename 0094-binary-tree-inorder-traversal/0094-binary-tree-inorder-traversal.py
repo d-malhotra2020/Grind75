@@ -6,8 +6,8 @@
 #         self.right = right
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        result = []
         stack = []
+        result = []
         current = root
         while current or stack:
             while current:
