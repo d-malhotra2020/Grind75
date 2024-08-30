@@ -9,8 +9,9 @@ class Solution:
                 return
             current.append(candidates[i])
             dfs(i, current, totalSum+candidates[i])
+            
             current.pop()
             dfs(i+1, current, totalSum)
+            
         dfs(0, [], 0)
         return result
-                
