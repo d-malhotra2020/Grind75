@@ -6,12 +6,8 @@ class Solution:
             firstStone = heapq.heappop(stones)
             secondStone = heapq.heappop(stones)
             if secondStone > firstStone:
-                heapq.heappush(stones, (firstStone - secondStone))
-        
+                heapq.heappush(stones, firstStone - secondStone)
+                
         stones.append(0)
         return abs(stones[0])
-            
-            
-            
-        
             
