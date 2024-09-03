@@ -14,3 +14,4 @@ class Solution:
             else:
                 left = k + 1
         return result
+            
