@@ -11,6 +11,6 @@ class Solution:
                 return False
             currentSum += node.val
             if not node.right and not node.left:
-                return (targetSum == currentSum)
-            return (dfs(node.left, currentSum) or dfs(node.right, currentSum))
+                return (currentSum == targetSum)
+            return dfs(node.left, currentSum) or dfs(node.right, currentSum)
         return dfs(root, 0)
