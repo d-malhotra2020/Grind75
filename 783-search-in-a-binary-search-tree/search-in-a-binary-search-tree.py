@@ -8,10 +8,10 @@ class Solution:
     def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
         current = root
         while current:
-            if val > current.val:
-                current = current.right
-            elif val < current.val:
-                current = current.left
-            else:
+            if current.val == val:
                 return current
-        return None
+            elif val > current.val:
+                current = current.right
+            else:
+                current = current.left
+        return current
