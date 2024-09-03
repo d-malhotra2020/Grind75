@@ -15,7 +15,7 @@ class Solution:
         else:
             if not root.right:
                 return root.left
-            elif not root.left:
+            if not root.left:
                 return root.right
             else:
                 current = root.right
