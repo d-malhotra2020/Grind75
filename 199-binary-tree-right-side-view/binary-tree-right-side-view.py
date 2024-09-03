@@ -9,7 +9,6 @@ class Solution:
         q = collections.deque()
         q.append(root)
         result = []
-        
         while q:
             qlength = len(q)
             rightSide = None
@@ -22,5 +21,4 @@ class Solution:
             if rightSide:
                 result.append(rightSide.val)
         return result
-                
                 
