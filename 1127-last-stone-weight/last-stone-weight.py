@@ -1,7 +1,7 @@
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
         stones = [-s for s in stones]
-        minHeap = heapq.heapify(stones)
+        heapq.heapify(stones)
         while len(stones) > 1:
             firstStone = heapq.heappop(stones)
             secondStone = heapq.heappop(stones)
