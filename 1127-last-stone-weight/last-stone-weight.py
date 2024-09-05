@@ -9,3 +9,4 @@ class Solution:
                 heapq.heappush(stones, (firstStone - secondStone))
         stones.append(0)
         return abs(stones[0])
+            
