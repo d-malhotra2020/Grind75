@@ -9,5 +9,6 @@ class Solution:
         while k > 0:
             distance, x, y = heapq.heappop(minHeap)
             result.append([x, y])
-            k -=1
+            k-=1
         return result
+            
