@@ -12,6 +12,10 @@ class Solution:
             
             current.pop()
             dfs(i+1, current, totalSum)
+            
         dfs(0, [], 0)
         return result
+                
+            
+            
             
