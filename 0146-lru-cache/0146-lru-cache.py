@@ -19,7 +19,7 @@ class LRUCache:
         nextNode = node.next
         prevNode.next = nextNode
         nextNode.prev = prevNode
-        
+    
     def insert(self, node):
         prevNode = self.right.prev
         nextNode = self.right
@@ -28,14 +28,13 @@ class LRUCache:
         node.next = nextNode
         node.prev = prevNode
         
-
     def get(self, key: int) -> int:
         if key in self.cache:
             self.remove(self.cache[key])
             self.insert(self.cache[key])
             return self.cache[key].val
         return -1
-        
+
     def put(self, key: int, value: int) -> None:
         if key in self.cache:
             self.remove(self.cache[key])
@@ -46,6 +45,7 @@ class LRUCache:
             LRU = self.left.next
             self.remove(LRU)
             del self.cache[LRU.key]
+            
         
 
 
