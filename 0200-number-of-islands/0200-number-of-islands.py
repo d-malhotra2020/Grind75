@@ -8,27 +8,18 @@ class Solution:
         visit = set()
         islands = 0
         
-        def bfs(r, c):
-            q = collections.deque()
-            visit.add((r, c))
-            q.append((r, c))
-            
-            while q:
-                row, col = q.popleft()
-                directions = [[1, 0], [-1, 0], [0, 1], [0, -1]]
-                
-                for dr, dc in directions:
-                    r, c = row + dr, col + dc
-                    if (r in range(rows) and
-                        c in range(columns) and
-                        grid[r][c] == "1" and 
-                        (r, c) not in visit):
-                        q.append((r, c))
-                        visit.add((r, c))
-                
         for r in range(rows):
             for c in range(columns):
                 if grid[r][c] == "1" and (r,c) not in visit:
-                    bfs(r, c)
+                    self.dfs(grid, r, c)
                     islands +=1
         return islands
+    
+    def dfs(self, grid, r, c):
+        if r < 0 or c < 0 or r>=len(grid) or c>=len(grid[0]) or grid[r][c] != "1":
+            return
+        grid[r][c] = "#"
+        self.dfs(grid, r+1, c)
+        self.dfs(grid, r-1, c)
+        self.dfs(grid, r, c+1)
+        self.dfs(grid, r, c-1)
