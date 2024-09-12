@@ -2,7 +2,6 @@ class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         if not grid:
             return 0
-        
         rows = len(grid)
         columns = len(grid[0])
         visit = set()
@@ -14,8 +13,7 @@ class Solution:
                     self.dfs(grid, r, c)
                     islands +=1
         return islands
-                    
-                    
+    
     def dfs(self, grid, r, c):
         rows = len(grid)
         columns = len(grid[0])
@@ -27,4 +25,4 @@ class Solution:
         self.dfs(grid, r-1, c)
         self.dfs(grid, r, c+1)
         self.dfs(grid, r, c-1)
-        
+                    
