@@ -25,4 +25,3 @@ class Solution:
         self.dfs(grid, r-1, c)
         self.dfs(grid, r, c+1)
         self.dfs(grid, r, c-1)
-                    
