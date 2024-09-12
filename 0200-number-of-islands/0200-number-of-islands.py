@@ -13,13 +13,15 @@ class Solution:
                     self.dfs(grid, r, c)
                     islands +=1
         return islands
-    
+                    
+                    
+                    
     def dfs(self, grid, r, c):
         rows = len(grid)
         columns = len(grid[0])
         
         if r < 0 or c < 0 or r >= rows or c >= columns or grid[r][c] != "1":
-            return
+            return 
         grid[r][c] = "#"
         self.dfs(grid, r+1, c)
         self.dfs(grid, r-1, c)
