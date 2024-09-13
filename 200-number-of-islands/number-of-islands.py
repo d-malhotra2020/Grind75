@@ -7,7 +7,7 @@ class Solution:
         
         for r in range(rows):
             for c in range(columns):
-                if grid[r][c] == "1" or (r, c) in visit:
+                if grid[r][c] == "1" and (r, c) not in visit:
                     self.dfs(grid, r, c)
                     islands +=1
         return islands
@@ -16,9 +16,8 @@ class Solution:
     def dfs(self, grid, r, c):
         rows = len(grid)
         columns = len(grid[0])
-        
         if r < 0 or c < 0 or r >= rows or c >= columns or grid[r][c] != "1":
-            return 
+            return
         grid[r][c] = "#"
         self.dfs(grid, r+1, c)
         self.dfs(grid, r-1, c)
