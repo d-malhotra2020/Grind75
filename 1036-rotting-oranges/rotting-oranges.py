@@ -9,16 +9,15 @@ class Solution:
         for r in range(rows):
             for c in range(columns):
                 if grid[r][c] == 1:
-                    fresh +=1
+                    fresh +=1 
                 if grid[r][c] == 2:
                     q.append([r, c])
-                    
-        directions = [[0, 1], [1, 0], [0, -1], [-1, 0]]
+        directions = [[1, 0], [0, 1], [-1, 0], [0, -1]]
         while q and fresh > 0:
             for i in range(len(q)):
                 r, c = q.popleft()
                 for dr, dc in directions:
-                    row = r + dr
+                    row = r + dr 
                     col = c + dc
                     if (row < 0 or col < 0 or row == rows or col == columns or grid[row][col] != 1):
                         continue
@@ -27,11 +26,7 @@ class Solution:
                     fresh -=1
             time +=1
         return time if fresh == 0 else -1
-                        
                     
-                
-                
-            
                     
-                
-            
+                    
+        
