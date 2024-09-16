@@ -3,7 +3,7 @@ class Solution:
         rows = len(grid)
         q = deque([(0, 0, 1)])
         visit = set((0, 0))
-        direction = [1, 0], [0, 1], [-1, 0], [0, -1], [-1, -1], [1, 1], [1, -1], [-1, 1]
+        direction = [[1, 0], [0, 1], [-1, 0], [0, -1], [1, 1], [-1, 1], [1, -1], [-1, -1]]
         
         while q:
             r, c, length = q.popleft()
@@ -14,9 +14,8 @@ class Solution:
             for dr, dc in direction:
                 row = r + dr
                 col = c + dc
-                if (row, col) not in visit:
+                if ((row, col)) not in visit:
                     q.append((row, col, length+1))
                     visit.add((row, col))
                     
         return -1
-        
