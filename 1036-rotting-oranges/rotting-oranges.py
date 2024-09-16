@@ -4,13 +4,14 @@ class Solution:
         rows = len(grid)
         columns = len(grid[0])
         fresh = 0
-        time = 0 
+        time = 0
+        
         for r in range(rows):
             for c in range(columns):
                 if grid[r][c] == 1:
-                    fresh += 1
+                    fresh +=1
                 if grid[r][c] == 2:
-                    q.append([r, c])
+                   q.append([r, c]) 
         directions = [[1, 0], [0, 1], [-1, 0], [0, -1]]
         while q and fresh > 0:
             for i in range(len(q)):
@@ -22,7 +23,9 @@ class Solution:
                         continue
                     grid[row][col] = 2
                     q.append([row, col])
-                    fresh -= 1
+                    fresh -=1
             time +=1
         return time if fresh == 0 else -1
-                
+                        
+            
+            
