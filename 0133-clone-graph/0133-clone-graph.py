@@ -19,5 +19,5 @@ class Solution:
                 copy.neighbors.append(dfs(neighbor))
             return copy
         if node:
-            return (dfs(node))
+            return dfs(node)
         return None
