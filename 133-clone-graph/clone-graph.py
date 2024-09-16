@@ -13,10 +13,13 @@ class Solution:
         def dfs(node):
             if node in hashmap:
                 return hashmap[node]
-            
             copy = Node(node.val)
             hashmap[node] = copy
             for neighbor in node.neighbors:
                 copy.neighbors.append(dfs(neighbor))
             return copy
-        return  dfs(node) if node else None
+        if node:
+            return dfs(node)
+        return None
+                
+                
