@@ -20,6 +20,4 @@ class Solution:
             return copy
         if node:
             return dfs(node)
-        return None
-                
                 
