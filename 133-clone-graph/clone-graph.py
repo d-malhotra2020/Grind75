@@ -21,3 +21,4 @@ class Solution:
         if node:
             return dfs(node)
         return None
+                
