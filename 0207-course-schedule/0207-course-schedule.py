@@ -5,7 +5,7 @@ class Solution:
         
         for course, prereq in prerequisites:
             hashmap[course].append(prereq)
-        
+            
         def dfs(course):
             if course in visit:
                 return False
@@ -19,7 +19,10 @@ class Solution:
             visit.remove(course)
             hashmap[course] = []
             return True
+            
         for course in range(numCourses):
             if not dfs(course):
                 return False
         return True
+                
+            
