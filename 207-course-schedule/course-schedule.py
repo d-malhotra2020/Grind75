@@ -1,5 +1,6 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        
         hashmap = {i:[] for i in range(numCourses)}
         visit = set()
         
@@ -20,7 +21,7 @@ class Solution:
             visit.remove(course)
             hashmap[course] = []
             return True
-            
+        
         for course in range(numCourses):
             if not dfs(course):
                 return False
