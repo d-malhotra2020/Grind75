@@ -11,12 +11,12 @@ class Solution:
                 return False
             if hashmap[course] == []:
                 return True
+            
             visit.add(course)
             
             for prereq in hashmap[course]:
                 if not dfs(prereq):
                     return False
-                
             visit.remove(course)
             hashmap[course] = []
             return True
