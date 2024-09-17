@@ -19,10 +19,9 @@ class Solution:
             visit.remove(course)
             hashmap[course] = []
             return True
-            
+        
         for course in range(numCourses):
             if not dfs(course):
                 return False
         return True
-                
             
