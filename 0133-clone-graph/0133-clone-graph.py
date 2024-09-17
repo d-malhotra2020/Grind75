@@ -15,6 +15,7 @@ class Solution:
                 return hashmap[node]
             copy = Node(node.val)
             hashmap[node] = copy
+            
             for neighbor in node.neighbors:
                 copy.neighbors.append(dfs(neighbor))
             return copy
