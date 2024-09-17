@@ -12,7 +12,7 @@ class Solution:
                     islands +=1
         return islands
     
-    
+        
     def dfs(self, grid, r, c):
         rows = len(grid)
         columns = len(grid[0])
@@ -21,5 +21,5 @@ class Solution:
         grid[r][c] = "#"
         self.dfs(grid, r+1, c)
         self.dfs(grid, r-1, c)
-        self.dfs(grid, r, c+1)
         self.dfs(grid, r, c-1)
+        self.dfs(grid, r, c+1)
