@@ -8,4 +8,3 @@ class Solution:
                 newRows[j] = newRows[j+1] + rows[j]
             rows = newRows
         return rows[0]
-                
