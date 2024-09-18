@@ -1,14 +1,16 @@
 class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
-        rows = len(obstacleGrid)
-        columns = len(obstacleGrid[0])
-        dp = {(rows - 1, columns - 1): 1}
+        M = len(obstacleGrid)
+        N = len(obstacleGrid[0])
         
-        def dfs(r, c):
-            if r == rows or c == columns or obstacleGrid[r][c]:
-                return 0
-            if (r, c) in dp:
-                    return dp[(r, c)]
-            dp[(r, c)] = dfs(r+1, c)  + dfs(r, c+1)
-            return dp[(r, c)]
-        return dfs(0, 0)
+        dp = [0]*N
+        dp[N-1] = 1
+        
+        for r in reversed(range(M)):
+            for c in reversed(range(N)):
+                if obstacleGrid[r][c]:
+                    dp[c] = 0
+                elif c + 1 < N:
+                    dp[c] = dp[c] + dp[c+1]
+
+        return dp[0]
