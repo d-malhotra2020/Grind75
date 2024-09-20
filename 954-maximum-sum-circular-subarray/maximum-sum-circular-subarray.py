@@ -7,10 +7,9 @@ class Solution:
         total = 0
         
         for n in nums:
-            currentMax = max(currentMax+n, n)
-            currentMin = min(currentMin+n, n)
-            total += n
+            currentMax = max(currentMax + n, n)
+            currentMin = min(currentMin + n, n)
             globalMax = max(globalMax, currentMax)
             globalMin = min(globalMin, currentMin)
-        
+            total += n
         return max(globalMax, total - globalMin) if globalMax > 0 else globalMax
