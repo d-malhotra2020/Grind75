@@ -12,4 +12,4 @@ class Solution:
                 elif c + 1 < columns:
                     dp[c] = dp[c] + dp[c+1]
         return dp[0]
-        
+                    
