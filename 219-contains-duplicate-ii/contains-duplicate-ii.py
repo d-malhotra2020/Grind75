@@ -6,8 +6,10 @@ class Solution:
         for right in range(len(nums)):
             if right - left > k:
                 window.remove(nums[left])
-                left+=1
+                left += 1
             if nums[right] in window:
                 return True
             window.add(nums[right])
         return False
+            
+                
