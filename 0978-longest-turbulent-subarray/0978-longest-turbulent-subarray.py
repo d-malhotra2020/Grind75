@@ -6,11 +6,11 @@ class Solution:
         prev = ""
         
         while right < len(arr):
-            if arr[right] > arr[right-1] and prev != ">":
+            if arr[right] > arr[right - 1] and prev != ">":
                 result = max(result, right - left + 1)
                 right +=1
                 prev = ">"
-            elif arr[right] < arr[right-1] and prev != "<":
+            elif arr[right] < arr[right - 1] and prev != "<":
                 result = max(result, right - left + 1)
                 right +=1
                 prev = "<"
