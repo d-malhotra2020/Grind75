@@ -12,4 +12,4 @@ class Solution:
             globalMax = max(globalMax, currentMax)
             globalMin = min(globalMin, currentMin)
             total += n
-        return max(globalMax, total - globalMin) if globalMax > 0 else globalMax
+        return max(globalMax, (total - globalMin)) if globalMax > 0 else globalMax
