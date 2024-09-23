@@ -7,5 +7,6 @@ class Solution:
             if currentSum / k >= threshold:
                 result += 1
             if i + k < len(arr):
-                currentSum += arr[i+k] - arr[i]
+                currentSum += arr[i + k] - arr[i]
         return result
+                
