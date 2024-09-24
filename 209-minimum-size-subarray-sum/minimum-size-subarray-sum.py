@@ -9,6 +9,6 @@ class Solution:
             while total >= target:
                 length = min(right - left + 1, length)
                 total -= nums[left]
-                left += 1
+                left+=1
         return 0 if length == float("inf") else length
                 
