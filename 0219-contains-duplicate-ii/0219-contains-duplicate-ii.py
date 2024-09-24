@@ -6,7 +6,7 @@ class Solution:
         for right in range(len(nums)):
             if right - left > k:
                 windows.remove(nums[left])
-                left+=1
+                left += 1
             if nums[right] in windows:
                 return True
             windows.add(nums[right])
