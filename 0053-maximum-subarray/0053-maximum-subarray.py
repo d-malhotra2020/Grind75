@@ -9,4 +9,3 @@ class Solution:
             current += n
             maxArray = max(maxArray, current)
         return maxArray
-            
