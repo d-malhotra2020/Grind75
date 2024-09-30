@@ -12,4 +12,8 @@ class Solution:
             globalMax = max(globalMax, currentMax)
             globalMin = min(globalMin, currentMin)
             total += n
-        return max(globalMax, (total - globalMin) if globalMax > 0 else globalMax)
+            
+        if globalMax > 0:
+            return max(globalMax, (total - globalMin))
+        else:
+            return globalMax
