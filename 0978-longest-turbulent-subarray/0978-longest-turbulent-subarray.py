@@ -19,5 +19,3 @@ class Solution:
                 left = right - 1
                 prev = ""
         return result
-        
-                
