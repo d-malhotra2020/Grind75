@@ -9,16 +9,14 @@ class Solution:
             return None
         while len(lists) > 1:
             mergedLists = []
-            
             for i in range(0, len(lists), 2):
                 list1 = lists[i]
-                list2 = lists[i+1] if (i+1) < len(lists) else None
-                mergedLists.append(self.mergeList(list1, list2))
+                list2 = lists[i+1] if (i + 1) < len(lists) else None
+                mergedLists.append(self.mergeLists(list1, list2))
             lists = mergedLists
         return lists[0]
                 
-                
-    def mergeList(self, list1, list2):
+    def mergeLists(self, list1, list2):
         dummyNode = ListNode()
         tail = dummyNode
         
@@ -30,7 +28,6 @@ class Solution:
                 tail.next = list2
                 list2 = list2.next
             tail = tail.next
-            
         if list1:
             tail.next = list1
             list1 = list1.next
@@ -38,4 +35,5 @@ class Solution:
             tail.next = list2
             list2 = list2.next
         return dummyNode.next
-        
+            
+            
