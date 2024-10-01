@@ -11,4 +11,3 @@ class Solution:
                 return True
             windows.add(nums[right])
         return False
-            
