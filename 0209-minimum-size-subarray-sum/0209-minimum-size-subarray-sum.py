@@ -11,4 +11,3 @@ class Solution:
                 total -= nums[left]
                 left += 1
         return 0 if length == float('inf') else length
-            
