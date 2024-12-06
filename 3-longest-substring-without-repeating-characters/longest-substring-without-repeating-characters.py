@@ -7,7 +7,8 @@ class Solution:
         for right in range(len(s)):
             while s[right] in characterSet:
                 characterSet.remove(s[left])
-                left += 1
+                left+=1
             characterSet.add(s[right])
             result = max(result, right - left + 1)
         return result
+                
