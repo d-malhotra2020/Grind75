@@ -7,4 +7,4 @@ class Solution:
           return [hashmap[goal], i]
         else:
           hashmap[nums[i]] = i
-          
+      
