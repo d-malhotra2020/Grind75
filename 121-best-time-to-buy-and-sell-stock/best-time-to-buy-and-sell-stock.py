@@ -4,11 +4,10 @@ class Solution:
         right = left + 1
         maxProfit = 0
         while right < len(prices):
-          if prices[left] < prices[right]:
+          if prices[right] > prices[left]:
             profit = prices[right] - prices[left]
             maxProfit = max(maxProfit, profit)
           else:
             left = right
-          right = right + 1
+          right += 1
         return maxProfit
-          
