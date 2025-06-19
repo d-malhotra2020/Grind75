@@ -9,5 +9,5 @@ class Solution:
             maxProfit = max(maxProfit, profit)
           else:
             left = right
-          right += 1
+          right +=1
         return maxProfit
