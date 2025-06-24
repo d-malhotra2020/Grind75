@@ -5,7 +5,7 @@ class Solution:
         width = len(image[0])
 
         def dfs(sr, sc):
-          if 0 <= sr < height and 0 <= sc < width and newColor == image[sr][sc] and image[sr][sc] != color:
+          if 0 <= sr < height and 0 <= sc < width and image[sr][sc] == newColor and image[sr][sc] != color:
             image[sr][sc] = color
             dfs(sr + 1, sc)
             dfs(sr - 1, sc)
@@ -13,4 +13,3 @@ class Solution:
             dfs(sr, sc - 1)
         dfs(sr, sc)
         return image
-          
