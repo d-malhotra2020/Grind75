@@ -3,11 +3,11 @@ class Solution:
     def minMeetingRooms(self, intervals: List[List[int]]) -> int:
         if not intervals:
           return 0
-        intervals.sort(key=lambda x: x[0])
-        min_heap = []
-        for start, end, in intervals:
-          if min_heap and start >= min_heap[0]:
-            heapq.heappop(min_heap)
-          heapq.heappush(min_heap, end)
-          
-        return len(min_heap)
+        intervals.sort(key = lambda x: x[0])
+        minHeap = []
+        for start, end in intervals:
+          if minHeap and start >= minHeap[0]:
+            heapq.heappop(minHeap)
+          heapq.heappush(minHeap, end)
+        return len(minHeap)
+            
