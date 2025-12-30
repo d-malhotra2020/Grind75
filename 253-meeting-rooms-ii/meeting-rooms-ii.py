@@ -10,4 +10,3 @@ class Solution:
             heapq.heappop(minHeap)
           heapq.heappush(minHeap, end)
         return len(minHeap)
-            
