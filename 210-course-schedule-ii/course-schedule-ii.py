@@ -7,13 +7,12 @@ class Solution:
         for a, b in prerequisites:
           graph[b].append(a)
           prerequisiteCount[a] += 1
-        
+
         queue = deque()
         for i in range(numCourses):
           if prerequisiteCount[i] == 0:
             queue.append(i)
-        
-        
+
         order = []
         while queue:
           course = queue.popleft()
@@ -23,9 +22,3 @@ class Solution:
             if prerequisiteCount[neighbor] == 0:
               queue.append(neighbor)
         return order if len(order) == numCourses else []
-
-
-
-
-
-
