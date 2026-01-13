@@ -6,5 +6,5 @@ class Solution:
           if not alreadyMerged or i[0] > alreadyMerged[-1][1]:
             alreadyMerged.append(i)
           else:
-            alreadyMerged[-1][1] = max(alreadyMerged[-1][1], i[-1])
+            alreadyMerged[-1][1] = max(alreadyMerged[-1][1], i[1])
         return alreadyMerged
