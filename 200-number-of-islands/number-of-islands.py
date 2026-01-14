@@ -8,14 +8,14 @@ class Solution:
 
         def dfs(r, c):
           if r < 0 or c < 0 or r >= rows or c >= columns:
-            return 
+            return
           if grid[r][c] != "1":
             return
           grid[r][c] = "0"
-          dfs(r+1, c)
-          dfs(r-1, c)
-          dfs(r, c+1)
-          dfs(r, c-1)
+          dfs(r + 1, c)
+          dfs(r - 1, c)
+          dfs(r, c + 1)
+          dfs(r, c - 1)
 
         for r in range(rows):
           for c in range(columns):
