@@ -1,25 +1,35 @@
+from collections import deque
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
+        if not grid:
+          return 0
+
         rows = len(grid)
-        columns = len(grid[0])
+        cols = len(grid[0])
         visit = set()
         islands = 0
-        
+
+        def bfs(r, c):
+          q = deque()
+          visit.add((r, c))
+          q.append((r, c))
+
+          while q:
+            row, col = q.popleft()
+            directions = [[1, 0], [-1, 0], [0, 1], [0, -1]]
+            for dr, dc in directions:
+              r, c = row + dr, col + dc
+              if ((r in range(rows) and
+                  (c in range(cols) and
+                  grid[r][c] == "1" and
+                  (r, c) not in visit))):
+                  q.append((r, c))
+                  visit.add((r, c))
+
         for r in range(rows):
-            for c in range(columns):
-                if grid[r][c] == "1" and (r, c) not in visit:
-                    self.dfs(grid, r, c)
-                    islands +=1
+          for c in range(cols):
+            if grid[r][c] == "1" and (r,c) not in visit:
+              bfs(r, c)
+              islands += 1
         return islands
-    
-    
-    def dfs(self, grid, r, c):
-        rows = len(grid)
-        columns = len(grid[0])
-        if r < 0 or c < 0 or r >= rows or c >= columns or grid[r][c] != "1":
-            return
-        grid[r][c] = "#"
-        self.dfs(grid, r+1, c)
-        self.dfs(grid, r-1, c)
-        self.dfs(grid, r, c+1)
-        self.dfs(grid, r, c-1)
+        
