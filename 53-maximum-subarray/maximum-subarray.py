@@ -7,5 +7,4 @@ class Solution:
             currentSum = 0
           currentSum += n
           maxSum = max(maxSum, currentSum)
-        return maxSum 
-      
+        return maxSum
