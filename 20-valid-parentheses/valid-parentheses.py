@@ -1,6 +1,6 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        hashmap = {"}":"{","]":"[",")":"("}
+        hashmap = {"}":"{", "]":"[", ")":"("}
         stack = []
         for char in s:
           if char in hashmap:
