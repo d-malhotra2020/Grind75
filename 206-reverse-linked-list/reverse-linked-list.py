@@ -11,4 +11,3 @@ class Solution:
         head.next.next = head
         head.next = None
         return newHead
-
