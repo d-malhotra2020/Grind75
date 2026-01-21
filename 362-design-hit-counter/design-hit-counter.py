@@ -2,16 +2,17 @@ from collections import deque
 class HitCounter:
 
     def __init__(self):
-        self.hitCounterVariable = deque()
+      self.hitCounterVar = deque()
+        
 
     def hit(self, timestamp: int) -> None:
-        self.hitCounterVariable.append(timestamp)
+      self.hitCounterVar.append(timestamp)
+        
 
     def getHits(self, timestamp: int) -> int:
-      while self.hitCounterVariable and self.hitCounterVariable[0] <= timestamp - 300:
-        self.hitCounterVariable.popleft()
-      return len(self.hitCounterVariable)
-        
+        while self.hitCounterVar and self.hitCounterVar[0] <= timestamp - 300:
+          self.hitCounterVar.popleft()
+        return len(self.hitCounterVar)
 
 
 # Your HitCounter object will be instantiated and called as such:
