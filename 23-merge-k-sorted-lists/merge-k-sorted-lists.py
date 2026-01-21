@@ -12,11 +12,11 @@ class Solution:
           for i in range(0, len(lists), 2):
             list1 = lists[i]
             list2 = lists[i + 1] if (i + 1) < len(lists) else None
-            mergedLists.append(self.MergeListsTogether(list1, list2))
+            mergedLists.append(self.mergeListsTogether(list1, list2))
           lists = mergedLists
         return lists[0]
 
-    def MergeListsTogether(self, list1, list2):
+    def mergeListsTogether(self, list1, list2):
       dummy = ListNode()
       tail = dummy
       while list1 and list2:
