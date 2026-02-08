@@ -11,15 +11,16 @@ class Solution:
             return
           if grid[r][c] != "1":
             return
-          grid[r][c] = "0"
+          grid[r][c] = "0" 
           dfs(r + 1, c)
           dfs(r - 1, c)
           dfs(r, c + 1)
           dfs(r, c - 1)
+
         for r in range(rows):
           for c in range(columns):
             if grid[r][c] == "1":
               islands += 1
               dfs(r, c)
         return islands
-          
+  
