@@ -9,4 +9,3 @@ class Solution:
           else:
             merged[-1][1] = max(merged[-1][1], i[1])
         return merged
-        
