@@ -9,15 +9,15 @@ class Solution:
           return None
         while len(lists) > 1:
           mergedLists = []
-
           for i in range(0, len(lists), 2):
             list1 = lists[i]
             list2 = lists[i+1] if (i + 1) < len(lists) else None
-            mergedLists.append(self.mergedListsTogther(list1, list2))
+            mergedLists.append(self.mergedListsTogether(list1, list2))
           lists = mergedLists
         return lists[0]
 
-    def mergedListsTogther(self, list1, list2):
+
+    def mergedListsTogether(self, list1, list2):
       dummyNode = ListNode()
       tail = dummyNode
 
@@ -29,9 +29,8 @@ class Solution:
           tail.next = list2
           list2 = list2.next
         tail = tail.next
-      if list1:
+      if list1: 
         tail.next = list1
       if list2:
         tail.next = list2
       return dummyNode.next
-          
