@@ -8,7 +8,6 @@ class Solution:
               stack.pop()
             else:
               return False
-          else: 
+          else:
             stack.append(char)
-        return True if not stack else False    
-
+        return True if not stack else False
