@@ -11,7 +11,9 @@ class Solution:
 
           currentMax = max(currentMax, currentArea)
           if height[left] < height[right]:
-            left +=1
+            left += 1
           else:
-            right -=1
+            right -= 1
         return currentMax
+
+        
