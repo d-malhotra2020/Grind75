@@ -6,8 +6,8 @@ class Solution:
       
         while left < right:
           width = right - left
-          h = min(height[left], height[right])
-          current_area = width * h
+          limiting_height = min(height[left], height[right])
+          current_area = width * limiting_height
 
           current_max = max(current_max, current_area)
 
