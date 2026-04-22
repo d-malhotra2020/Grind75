@@ -3,7 +3,7 @@ class Solution:
         nums.sort()
         result = 0
         for a in range(len(nums)-1, 1, -1):
-          b = 0 
+          b = 0
           c = a - 1
           while b < c:
             if nums[b] + nums[c] > nums[a]:
