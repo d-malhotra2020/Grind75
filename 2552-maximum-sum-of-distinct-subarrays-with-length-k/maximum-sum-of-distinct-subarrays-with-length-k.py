@@ -15,5 +15,5 @@ class Solution:
             freq[nums[left]] -= 1
             if freq[nums[left]] == 0:
               del freq[nums[left]]
-            left +=1
+            left += 1
         return 0 if max_sum == float('-inf') else max_sum
