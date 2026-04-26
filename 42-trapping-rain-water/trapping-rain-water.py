@@ -9,12 +9,11 @@ class Solution:
         result = 0
         while left < right:
           if leftMax < rightMax:
-            left +=1
+            left += 1
             leftMax = max(leftMax, height[left])
             result += leftMax - height[left]
           else:
             right -= 1
             rightMax = max(rightMax, height[right])
             result += rightMax - height[right]
-
         return result
