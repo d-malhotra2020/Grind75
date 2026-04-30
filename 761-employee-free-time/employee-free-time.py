@@ -9,14 +9,13 @@ class Interval:
 class Solution:
     def employeeFreeTime(self, schedule: '[[Interval]]') -> '[Interval]':
 
-      flat = []
       merged = []
+      flat = []
       free_time = []
 
       for employee in schedule:
         for interval in employee:
           flat.append(interval)
-
       flat.sort(key = lambda x: x.start)
 
       for i in flat:
@@ -32,5 +31,10 @@ class Solution:
           free_time.append(Interval(start, end))
       return free_time
 
-
         
+
+
+
+
+          
+
