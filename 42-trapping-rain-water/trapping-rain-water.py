@@ -1,7 +1,5 @@
 class Solution:
     def trap(self, height: List[int]) -> int:
-        if not height:
-          return 0
         left = 0
         right = len(height) - 1
         leftMax = height[left]
@@ -16,4 +14,5 @@ class Solution:
             right -= 1
             rightMax = max(rightMax, height[right])
             result += rightMax - height[right]
-        return result
+        return 0 if not height else result
+
