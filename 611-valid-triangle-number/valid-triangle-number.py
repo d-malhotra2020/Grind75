@@ -2,6 +2,7 @@ class Solution:
     def triangleNumber(self, nums: List[int]) -> int:
         nums.sort()
         result = 0
+
         for c in range(len(nums) - 1, 1, -1):
           a = 0
           b = c - 1
@@ -12,4 +13,3 @@ class Solution:
             else:
               a += 1
         return result
-              
