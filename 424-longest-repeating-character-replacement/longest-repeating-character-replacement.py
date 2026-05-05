@@ -1,9 +1,9 @@
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
         left = 0
-        max_string = 0
-        max_freq = 0
         current = {}
+        max_freq = 0
+        max_string  = 0
 
         for right in range(len(s)):
           current[s[right]] = current.get(s[right], 0) + 1
