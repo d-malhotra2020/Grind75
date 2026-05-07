@@ -5,7 +5,7 @@ class Solution:
         max_area = 0
 
         while i < len(heights):
-          if not stack or heights[i] > heights[stack[-1]]:
+          if not stack or heights[i] >= heights[stack[-1]]:
             stack.append(i)
             i += 1
           else:
