@@ -1,6 +1,5 @@
 class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
-        
         def time_taken(rate):
             time = 0
             for i in range(len(piles)):
@@ -11,7 +10,7 @@ class Solution:
         right = max(piles)
 
         while left < right:
-            mid = (left + right)//2
+            mid = (left + right) // 2
             if time_taken(mid) > h:
                 left = mid + 1
             else:
