@@ -1,8 +1,8 @@
 class Solution:
     def splitArray(self, nums: List[int], k: int) -> int:
         def canSplit(maxSum):
-            currentSum = 0
             subArray = 1
+            currentSum = 0
 
             for n in nums:
                 if currentSum + n > maxSum:
@@ -21,4 +21,3 @@ class Solution:
             else:
                 left = mid + 1
         return left
-
