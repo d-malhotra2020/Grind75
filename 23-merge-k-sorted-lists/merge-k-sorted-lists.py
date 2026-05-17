@@ -6,17 +6,15 @@
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         heap = []
-        nonEmpty = []
-        
+        notEmpty = []
+
         for head in lists:
             if head:
-                nonEmpty.append(head)
+                notEmpty.append(head)
 
-        if not nonEmpty:
-            return None
-        
-        for head in nonEmpty:
-            heapq.heappush(heap, (head.val, id(head), head))
+        for head in notEmpty:
+            if head:
+                heapq.heappush(heap, (head.val, id(head), head))
 
         dummy = ListNode(0)
         current = dummy
@@ -26,8 +24,5 @@ class Solution:
             current.next = node
             current = current.next
             if node.next:
-                heapq.heappush(heap, (node.next.val, id(node), node.next))
+                heapq.heappush(heap, (node.next.val, id(node.next), node.next))
         return dummy.next
-
-        
-        
