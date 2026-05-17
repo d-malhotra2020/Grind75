@@ -9,17 +9,17 @@ class Solution:
         maxVal = 0
         def dfs(node):
             nonlocal maxVal
+
             if not node:
                 return 0
-
+            
             left = dfs(node.left)
             right = dfs(node.right)
 
             maxVal = max(maxVal, left + right)
 
             return max(left, right) + 1
-        
         dfs(root)
         return maxVal
-
-            
+        
+        
