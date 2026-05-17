@@ -11,9 +11,7 @@ class Solution:
         
         if not root.right and not root.left:
             return targetSum == root.val
-
+        
         targetSum -= root.val
 
         return self.hasPathSum(root.left, targetSum) or self.hasPathSum(root.right, targetSum)
-
-        
