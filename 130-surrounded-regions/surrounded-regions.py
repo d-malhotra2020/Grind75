@@ -1,19 +1,17 @@
 class Solution:
     def solve(self, board: List[List[str]]) -> None:
-        if not board:
-            return
+
         rows = len(board)
         columns = len(board[0])
 
         def dfs(r, c):
-            if r < 0 or c < 0 or r >= rows or c >= columns or board[r][c] != "O":
+            if r < 0 or c < 0 or r >= rows or c >= columns or board[r][c] != 'O':
                 return
             board[r][c] = "S"
             dfs(r + 1, c)
             dfs(r - 1, c)
             dfs(r, c + 1)
             dfs(r, c - 1)
-
         for i in range(rows):
             if board[i][0] == "O":
                 dfs(i, 0)
@@ -31,5 +29,5 @@ class Solution:
                 elif board[i][j] == "O":
                     board[i][j] = "X"
         return board
-            
 
+        
