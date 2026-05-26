@@ -13,9 +13,8 @@ class Solution:
             for directionX, directionY in directions:
                 newX = currentX + directionX
                 newY = currentY + directionY
-
+                
                 if (newX, newY) not in visited:
                     visited.add((newX, newY))
                     queue.append((newX, newY, moves + 1))
         return -1
-                
