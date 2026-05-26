@@ -2,12 +2,13 @@ class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
         if not grid:
             return -1
-        
-        
+
+        queue = deque()
         rows = len(grid)
         columns = len(grid[0])
-        queue = deque()
         oranges = 0
+
+        
 
         for r in range(rows):
             for c in range(columns):
@@ -15,13 +16,12 @@ class Solution:
                     queue.append((r, c))
                 elif grid[r][c] == 1:
                     oranges += 1
-        
         directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
         minutes = 0
         while queue and oranges > 0:
-            levels = len(queue)
+            level = len(queue)
             minutes += 1
-            for i in range(levels):
+            for i in range(level):
                 currentX, currentY = queue.popleft()
                 for directionX, directionY in directions:
                     newX = currentX + directionX
@@ -32,4 +32,6 @@ class Solution:
                         oranges -= 1
         return minutes if oranges == 0 else -1
 
-                
+
+            
+
