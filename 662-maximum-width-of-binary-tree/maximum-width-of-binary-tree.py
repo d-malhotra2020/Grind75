@@ -10,20 +10,25 @@ class Solution:
             return 0
         
         queue = deque([(root, 0)])
-        totalMax = 0
+        result = 0
 
         while queue:
             level = len(queue)
             _, leftPos = queue[0]
             rightPos = -1
-
             for i in range(level):
                 node, pos = queue.popleft()
                 if i == level - 1:
                     rightPos = pos
                 if node.left:
-                    queue.append((node.left, 2 * pos))
+                        queue.append((node.left, 2 * pos))
                 if node.right:
-                    queue.append((node.right, 2 * pos + 1))
-            totalMax = max(totalMax, rightPos - leftPos + 1)
-        return totalMax
+                        queue.append((node.right, 2 * pos + 1))
+            result = max((result, rightPos - leftPos + 1))
+        return result
+
+            
+
+
+
+
