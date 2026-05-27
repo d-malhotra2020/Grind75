@@ -18,17 +18,18 @@ class Solution:
             return -1
 
         for bus in busStops[source]:
-            queue.append((bus, 1))
-            visited.add((bus))
-        
+            if bus not in visited:
+                queue.append((bus, 1))
+                visited.add((bus))
+
         while queue:
             currentBus, numChanges = queue.popleft()
             for stop in routes[currentBus]:
                 if stop == target:
                     return numChanges
-            
+
                 for busConnection in busStops[stop]:
                     if busConnection not in visited:
                         queue.append((busConnection, numChanges + 1))
                         visited.add((busConnection))
-        return -1              
+        return -1
